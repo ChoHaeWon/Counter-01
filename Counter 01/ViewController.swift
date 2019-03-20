@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var countrLabel: UILabel!
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        countrLabel.text = "0"
     }
 
-
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        count = count + 1
+        print(count)
+        countrLabel.text = String(count)
+    }
+    
 }
 
